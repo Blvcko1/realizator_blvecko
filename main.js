@@ -123,7 +123,17 @@ client.on('messageCreate', async (message) => {
 
     if (!partneringUsers.has(message.author.id)) {
       partneringUsers.set(message.author.id, null);
-      await message.channel.send("🌎 Jeśli chcesz nawiązać partnerstwo, wyślij swoją reklamę (maksymalnie 1 serwer).");
+      await message.channel.send(```🌎 Jeśli chcesz nawiązać partnerstwo:
+**- Zapoznaj się z wymaganiami serwera:**
+📜・Wymagania do nawiązania Współpracy
+Przedstawiciel serwera MUSI się znajdować na naszym serwerze. Jeżeli opuści serwer, współpraca zostaje zerwana i Użytkownik zostanie permanentnie Zbanowany!
+Serwer NIE MOŻE być NSFW, Scam, Zaproszenia = psc itd.
+Osoba Nawiązująca z nami współprace POWINNA stosować się do zasad panujących na serwerze (⁠「📝」regulamin)
+💜・Nagrody, które można uzyskac nawiązujac z nami współprace:
+Specjalną role @(💼) Partner
+
+**- Wyślij swoją reklamę** 
+```);
     } else {
       const userAd = partneringUsers.get(message.author.id);
 
